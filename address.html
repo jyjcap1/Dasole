@@ -10,17 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=89df700676344758c5301fec07379b3f"></script>
-		<script>
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-			mapOption = { 
-				center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-				level: 3 // 지도의 확대 레벨
-			};
-
-		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-		var map = new kakao.maps.Map(mapContainer, mapOption); 
-		</script>		
 	</head>
 	<body class="subpage">
 
@@ -46,6 +35,26 @@
 			<section id="main" class="wrapper">
 				<div class="inner">
 				   <div id="map" style="width:100%;height:350px;"></div>
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=89df700676344758c5301fec07379b3f"></script>
+					<script>
+					// 이미지 지도에서 마커가 표시될 위치입니다 
+					var markerPosition  = new kakao.maps.LatLng(37.473438, 126.824788); 
+
+					// 이미지 지도에 표시할 마커입니다
+					// 이미지 지도에 표시할 마커는 Object 형태입니다
+					var marker = {
+						position: markerPosition
+					};					
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+						mapOption = { 
+							center: new kakao.maps.LatLng(37.473438, 126.824788), // 지도의 중심좌표
+							level: 2 ,// 지도의 확대 레벨
+							marker: marker // 이미지 지도에 표시할 마커 
+						};
+
+					// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+					var map = new kakao.maps.Map(mapContainer, mapOption); 
+					</script>		
 				</div>
 			</section>
 
