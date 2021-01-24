@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>다솔</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=89df700676344758c5301fec07379b3f"></script>
+		<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+			mapOption = { 
+				center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+				level: 3 // 지도의 확대 레벨
+			};
+
+		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+		</script>		
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">찾아오기</a>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">천장계산기</a></li>
+					<li><a href="generic.html">벽채계산기</a></li>
+					<li><a href="elements.html">찾아오기</a></li>
+					<li><a href="elements.html">담당자연락처</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+				   <div id="map" style="width:100%;height:350px;"></div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>
+						<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
+						<li><span class="icon fa-map-marker"></span> 123 Somewhere Road, Nashville, TN 00000</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
